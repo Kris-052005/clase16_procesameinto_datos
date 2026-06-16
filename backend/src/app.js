@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("api/parqueo/calcular", (req, res) => {
+app.post("/api/parqueo/calcular", (req, res) => {
     const { placa, tipo, horas, minutos}= req.body; // se desarma el obejto en 4 variables, todos los datos son obligarios
     if (!placa ||placa.trim() === "") {
         res.status(400).json({error: "La placa es obligatoria"});
