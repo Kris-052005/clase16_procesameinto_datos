@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv"; 
 import cors from "cors";
 import parqueoRoutes from "./routes/parque.routes.js";
+import usuarioRoutes from "./routes/usuario.routes.js";
 
 
 dotenv.config();
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/api/parqueo", parqueoRoutes);
+app.use("/api/usuarios", usuarioRoutes);
 
 
 app.listen(4000, () => {
